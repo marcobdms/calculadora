@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,35 +9,55 @@
 </head>
 <body>
     <div class="calculadora">
-        <div class="numbers"><input type="text" placeholder="" ></div>
+        <div class="numbers"><input class="input" id="input" placeholder="0"></div>
         <div class="">
+
             <div class="primera fila">
-                <button class="Ce"><h1>C</h1></button><button class="masomenos"><h1>+/-</h1></button>
-                <button class="porcentaje"><h1>%</h1></button><button class="division"><h1>/</h1></button>
+                <button class="Ce" onclick="Ce()"><h1>C</h1></button>
+                <button class="masomenos" onclick="inverso()"><h1>+/-</h1></button>
+                <button class="porcentaje" onclick="porciento()"><h1>%</h1></button>
+                <button class="division" onclick="operacionFunction('/')"><h1>÷</h1></button>
             </div>
+
             <div class="segunda fila">
-                <button class="siete"><h1>7</h1></button><button class="ocho"><h1>8</h1></button>
-                <button class="nueve"><h1>9</h1></button><button class="equis"><h1>x</h1></button>
+                <button class="siete" onclick="add(7)"><h1>7</h1></button>
+                <button class="ocho" onclick="add(8)"><h1>8</h1></button>
+                <button class="nueve" onclick="add(9)"><h1>9</h1></button>
+                <button class="equis" onclick="operacionFunction('*')"><h1>x</h1></button>
             </div>
+
             <div class="tercera fila">
-                <button class="cuatro"><h1>4</h1></button><button class="cinco"><h1>5</h1></button>
-                <button class="seis"><h1>6</h1></button><button class="menos"><h1>-</h1></button>
+                <button class="cuatro" onclick="add(4)"><h1>4</h1></button>
+                <button class="cinco" onclick="add(5)"><h1>5</h1></button>
+                <button class="seis" onclick="add(6)"><h1>6</h1></button>
+                <button class="menos" onclick="operacionFunction('-')"><h1>-</h1></button>
             </div>
+
             <div class="cuarta fila">
-                <button class="uno"><h1>1</h1></button><button class="dos"><h1>2</h1></button>
-                <button class="tres"><h1>3</h1></button><button class="mas"><h1>+</h1></button>
+                <button class="uno" onclick="add(1)"><h1>1</h1></button>
+                <button class="dos" onclick="add(2)"><h1>2</h1></button>
+                <button class="tres" onclick="add(3)"><h1>3</h1></button>
+                <button class="mas" onclick="operacionFunction('+')"><h1>+</h1></button>
             </div>
+
             <div class="quinta fila">
-                <button class="cero"><h1>0</h1></button><button class="coma"><h1>,</h1></button>
-                <button class="igual"><h1>=</h1></button>
+                <button class="cero" onclick="add(0)"><h1>0</h1></button>
+                <button class="coma" onclick="add('.')"><h1>,</h1></button>
+                <button class="igual" onclick="igual()"><h1>=</h1></button>
             </div>
-            <div class="cuarta fila">
-                <button class="cuadrado"><h1>x^2</h1></button><button class="cubo"><h1>x^3</h1></button>
-                <button class="PI"><h1>π</h1></button><button class="raiz"><h1>√</h1></button>
+
+            <div class="sexta fila">
+                <button class="cuadrado" onclick="cuadrado()"><h1>x&#178</h1></button>
+                <button class="cubo" onclick="cubo()"><h1>x&#179</h1></button>
+                <button class="PI" onclick="pi()"><h1>π</h1></button>
+                <button class="raiz" onclick="raiz()"><h1>&radic;</h1></button>
             </div>
-            <div class="cuarta fila">
-                <button class="cuadrado"><h1>mc</h1></button><button class="cubo"><h1>m+</h1></button>
-                <button class="PI"><h1>m-</h1></button><button class="raiz"><h1>m</h1></button>
+
+            <div class="septima fila">
+                <button class="mc"><h1>mc</h1></button>
+                <button class="mplus"><h1>m+</h1></button>
+                <button class="m-"><h1>m-</h1></button>
+                <button class="m"><h1>m</h1></button>
             </div>
         </div>
     </div>
